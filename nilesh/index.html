@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Cosmetic Jewellery Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">Glamour Jewels</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img id="sliderimg" src="https://glamourartjewellery.com/cdn/shop/files/Banner-2.jpg?v=1744283405&width=3000"
+            alt="">
+        <!-- <h2>Shine With Elegance</h2>
+        <p>Discover beautiful cosmetic jewellery that completes your look.</p> -->
+        <br>
+        <br>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Our Jewellery Collection</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src=data:image/jpeg;base64,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
+                    alt="Earrings">
+                <h3>Crystal Earrings</h3>
+                <p>₹499.00</p>
+                <button onclick="addToCart('Crystal Earrings')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRO0lrzTYHvFKL1VxIYv07-rPZxR2MdSvdw&s"
+                    alt="">
+                <h3>Elegant Necklace</h3>
+                <p>₹899.00</p>
+                <button onclick="addToCart('Elegant Necklace')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://kinclimg1.bluestone.com/f_webp,c_scale,w_1024,b_rgb:f0f0f0/giproduct/BISV0910V22_YAA18DIG6XXXXXXXX_ABCD00-PICS-00000-1024-81503.png"
+                    alt="Bracelet">
+                <h3>Golden Bracelet</h3>
+                <p>₹699.00</p>
+                <button onclick="addToCart('Golden Bracelet')">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-------------------- image slider ------------------------>
+    <section class="round-slider">
+        <h2 style="text-align: center;">Products</h2>
+        <br>
+        <br>
+        <div class="round-slide-track">
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s"
+                    alt="Earrings"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVnPlyL1axdY2NN8fLtqf9sDo9Vo4oJuU1Ww&s"
+                    alt="Necklace"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-zfFLLgfCZP6n6tC9W0ul2-2krrOY95Zeg&s"
+                    alt="Bracelet"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8gt28YUqFepA3hBGjrJQMOaZldm-az4Atg&s"
+                    alt="Earrings"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQinezd5OhsgARNZmeHWd8MHuKjGwkRUf3hZA&s"
+                    alt="Necklace"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-zfFLLgfCZP6n6tC9W0ul2-2krrOY95Zeg&s"
+                    alt="Bracelet"></div>
+            <div class="round-slide"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8gt28YUqFepA3hBGjrJQMOaZldm-az4Atg&s"
+                    alt="Earrings"></div>
+        </div>
+    </section>
+
+
+    <!-- About us ------------------------>
+
+    <section class="about" id="about">
+        <br>
+        <h2>About Us</h2>
+        <p>
+            At Glamour Jewels, we believe every person deserves to shine.
+            Our jewellery is designed to add elegance, confidence and charm to your everyday look.
+        </p>
+
+        <div class="about-info">
+            <div class="box">
+                <h3>✨ Our Mission</h3>
+                <p>To deliver high-quality, stylish, and affordable cosmetic jewellery for everyone.</p>
+            </div>
+
+            <div class="box">
+                <h3>💎 Our Vision</h3>
+                <p>To become India’s most loved brand for trendy and glamorous jewellery.</p>
+            </div>
+
+            <div class="box">
+                <h3>🌸 Our Values</h3>
+                <p>Quality • Trust • Beauty • Affordability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- our gallery ------------------------>
+
+    <section class="gallery">
+        <h2>Our Gallery</h2>
+        <br>
+        <div class="gallery-grid">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrqQ-x_UPx0I39qQNI2M8OFAu9weRbj-AbA&s" />
+        </div>
+    </section>
+
+    <!-- contact  ------------------------>
+
+    <section class="contact-box" id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-wrapper">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ------------------map------------------ -->
+    <section id="contact" class="contact-section">
+        <h2>Our Location</h2>
+
+        <div class="contact-container">
+            <!-- Address Box -->
+            <div class="contact-details">
+                <h3>Our Location</h3>
+                <p><strong>Shop Name:</strong>Glamour Jewels</p>
+                <p><strong>Address:</strong> sahwas chs plot no 27 Sec 18A nerul navi Mumbai, Maharashtra</p>
+                <p><strong>Phone:</strong> +91 9321204038</p>
+                <p><strong>PinCode</strong> 400706</p>
+                <p><strong>Email:</strong> Nileshmaramwar03@gmail.com</p>
+            </div>
+
+            <!-- Google Map -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6515067592773!2d73.00885007381535!3d19.035072053258798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c33a53aad861%3A0xcd4712cd60e3ace8!2sSahawas%20CHS!5e0!3m2!1sen!2sin!4v1764593494880!5m2!1sen!2sin"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        function addToCart(itemName) {
+            alert(itemName + " has been added to your cart!");
+        }
+
+        function scrollToProducts() {
+            document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+        }
+
+    </script>
+</body>
+
+</html>

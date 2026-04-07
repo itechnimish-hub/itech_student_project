@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #333;
+}
+
+.navbar-toggler {
+  background-color: black;
+}
+
+.nav-link {
+  color: black;
+}
+
+#sliderimg {
+  width: 100%;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  color: #e84393;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #e84393;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  /* background: url('https://i.ibb.co/Zd36bHc/jewellery-bg.jpg') center/cover; */
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  background: #e84393;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #c2185b;
+}
+
+/* Products Section */
+.products {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff;
+  width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #e84393;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #c2185b;
+}
+
+/* About */
+.about,
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.about-info .box {
+  width: 280px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* <-----------our gallery ---------> */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+
+/* Contact Section */
+.contact-box {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 32px;
+  color: #e84393;
+  margin-bottom: 25px;
+}
+
+/* Contact Form Wrapper */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact Form */
+.contact-form {
+  width: 350px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #f8c2d8;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e84393;
+}
+
+/* Button */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #e84393;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #c2185b;
+}
+
+
+/* <!-- ------------------map------------------ --> */
+.contact-section {
+  padding: 60px 20px;
+  background: #fff0f8;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  color: #e6007e;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-details h3 {
+  color: #ff2a8a;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.contact-map {
+  flex: 1.2;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+/* <!-------------------- image slider ------------------------> */
+
+.round-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: #fff0f8;
+}
+
+.round-slide-track {
+  display: flex;
+  width: calc(250px * 5);
+  /* total width = single slide * number of slides */
+  animation: scroll 10s linear infinite;
+}
+
+.round-slide {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.round-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Animation – scroll right to left */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* slide halfway then repeat */
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e84393;
+  color: #fff;
+}
